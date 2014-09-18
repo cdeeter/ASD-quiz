@@ -111,12 +111,13 @@ $nextBtn.on('click',function() {
 				$answerTrack.fadeIn(800); 
 
 			} else if (qTrack === 6) {
-				$nextBtn.remove();
+				$nextBtn.hide();
 				$answerTrack.hide();
 				checkAnswer();
 				$question.hide();
 				$results.show();
 				$restartBtn.show();
+				$questionOpts.empty();
 			} 
 	}
 });
@@ -126,6 +127,21 @@ var nextQuestion = function() {
 	$questionText.text("" + asdQuiz[currentQuestion].qText + "");
 	$questionOpts.append("" + answerList[currentQuestion].a0 + "").append("" + answerList[currentQuestion].a1 + "").append("" + answerList[currentQuestion].a2 + "").append("" + answerList[currentQuestion].a3 + "");
 }
+
+
+//retake quiz
+$restartBtn.on('click',function(){
+	var qTrack = 1;
+		corrTrack = 0;
+		currentQuestion = 0;
+	$restartBtn.hide();
+	$results.hide();
+	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
+	$questionText.show().text("" + asdQuiz[0].qText + "");
+	$questionOpts.append("" + answerList[0].a0 + "").append("" + answerList[0].a1 + "");
+	$question.fadeIn(800);
+	$nextBtn.show();
+})
 
 
 });
