@@ -28,8 +28,8 @@ var asdQuiz = new Array();
 asdQuiz[0] = new qDetails(0, "What kind of disorder is Autism?");
 asdQuiz[1] = new qDetails(1, "How is Autism treated?");
 asdQuiz[2] = new qDetails(2, "How prevalent is the diagnosis of Autism in the US?");
-asdQuiz[3] = new qDetails(3, "Whom is ASD more common among?");
-asdQuiz[4] = new qDetails(4, "What is the earliest age that an accurate diagnosis of ASD can be given?");
+asdQuiz[3] = new qDetails(3, "Whom is Autism more common among?");
+asdQuiz[4] = new qDetails(4, "What is the earliest age that an accurate diagnosis of Autism can be given?");
 
 function qAnswers(a0, a1, a2, a3, corrAns) {
 	this.a0 = a0;
