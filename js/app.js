@@ -74,7 +74,7 @@ $startBtn.on('click',function(){
 	$question.fadeIn(800);
 	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
 	$questionText.show().text("" + asdQuiz[0].qText + "");
-	$questionOpts.append("" + answerList[0].a0 + "").append("" + answerList[0].a1 + "");
+	$questionOpts.append("" + answerList[currentQuestion].a0 + "").append("" + answerList[currentQuestion].a1 + "").append("" + answerList[currentQuestion].a2 + "").append("" + answerList[currentQuestion].a3 + "");
 });
 
 
@@ -138,7 +138,7 @@ $restartBtn.on('click',function(){
 	$results.hide();
 	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
 	$questionText.show().text("" + asdQuiz[0].qText + "");
-	$questionOpts.append("" + answerList[0].a0 + "").append("" + answerList[0].a1 + "");
+	$questionOpts.append("" + answerList[currentQuestion].a0 + "").append("" + answerList[currentQuestion].a1 + "").append("" + answerList[currentQuestion].a2 + "").append("" + answerList[currentQuestion].a3 + "");
 	$question.fadeIn(800);
 	$nextBtn.show();
 })
