@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Autism Spectrum Disorder Quiz</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css"/>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div id="quizBody"><br />
+
+		<div class="intro">
+			<h1>How much do you know about Autism?</h1><br /> <br /><br />
+			<p>There are lots of misconceptions out there about Autism Spectrum Disorder.<br /><br /> Do you know fact from fiction? Let's find out!</p><br /><br /><br /> <br />
+			<input type="button" id="startBtn" value="Start the Quiz!"> 
+		</div>
+
+
+		<div class="question">
+			<h1 class="qNum">Question</h1><br /><br/><br/>
+			<span id="quizQuestion"></span><br/><br/>
+			<ul class="qOptions">
+			</ul><br/>
+		</div>
+		<input type="button" id="nextBtn" value="Next Question"><br/><br/><br/>
+		<div class="answerTrack">You got <span class="answerCount">0</span>/5 correct so far!</div>
+
+
+		<div class="results">
+			<p><h1>You got <span id="answerCount">0</span> out of 5 correct!</h1></p><br />
+			<h2>Answer key:<br /><br/>
+			<h2>1. What kind of disorder is Autism?</h2>
+			Autism is classified as a developmental disorder because it impacts the way the brain develops and functions. It often results in characteristics such as social deficits, repetitive behaviors ("stimming"), hypersensitivity to light, textures, sounds, etc., and verbal communication issues. It is the result of a neurological disorder, and is NOT the same as mental illness.<br/><br/>
+			<h2>2. How is Autism treated?</h2>
+			Autism is usually treated using a variety of methods, including (but not limited to) behavioral thearpy, medication, occupational therapy, speech therapy. The earlier treatment is started, the bigger impact it is more likely to make, especially with treatment forms such as behavioral therapy.<br/><br/>
+			<h2>3. How prevalent is Autism in the US?</h2>
+			The most current statistic is 1 in 68 children are diagnosed with Autism Spectrum Disorder. It has increased by 119% since 2000!<br/><br/>
+			<h2>4. Whom is ASD more common among?</h2>
+			Autism is about 5 times more common in boys (1 in 42) than in girls (1 in 189).<br/><br/>
+			<h2>5. What is the earliest age that an accurate diagnosis of ASD can be given?</h2>
+			Children can be diagnosed as young as age 2, but on average are not diagnosed until age 4. Signs of Autism occur in childhood and thus it cannot be developed as an adult, although it will persist into a child’s adult life.<br/><br/><br/>
+			<p><h5>Thanks for taking my quiz! If you are interested in more information about Autism Spectrum Disorder, you can start your research <a href="http://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd/index.shtml">here</a>.</h5><Br /><br />
+			<h4>Statistics came from the <a href="http://www.cdc.gov/ncbddd/autism/data.html">CDC</a>.</h4><br/><br/>
+		</div>
+			<button name="restart" id="restartBtn">Try again!</button> 
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+//questions
+var questions - [
+
+{
+	quizQuestion: "ASD is a mental health disorder.",
+	quizChoices: ["True", "False"],
+	answerDetails: 	"FALSE. Autism is a developmental disability that impacts the way the brain develops and functions, and often results in characteristics such as impaired social interaction, hypersensitivity to light, textures, sounds, etc., repetitive and stereotyped behaviors (“stimming”), and verbal communication issues. It is the result of a neurological disorder, and is NOT the same as mental illness."
+},
+
+{
+	quizQuestion: "All people who live with Autism are affected by it in the same way.",
+	quizChoices: ["True", "False"],
+	answerDetails: "FALSE. Autism, aka Autism Spectrum Disorder (ASD) is seen as a spectrum of severity. Some people on the spectrum are more high functioning and may not even appear to have any noticeable signs of their diagnosis to others (such as Aspergers Syndrome, which is a diagnosis given to those at the higher end of the spectrum). Others may be more low functioning, where they may need the care of another person in order to complete daily tasks. Every person on the spectrum is unique in the way that Autism affects their lives."
+},
+
+{
+	quizQuestion: "What do you think is the current statistic for the prevalence of children who are on the Autism spectrum in the United States? Take your best guess!",
+	quizChoices: ["(a) 1 in 68 children", "(b) 1 in 110", "(c) 1 in 136", "(d) 1 in  240"],
+	answerDetails: "The answer is: A. The most recent statistic is 1 in 68 children. It has increased by 119% since 2000."
+},
+
+{
+	quizQuestions: "Whom do you think that Autism is, statistically, more common among?",
+	quizChoices: ["(a) Girls", "(b) Boys", "(c) It affects all sexes the same"],
+	answerDetails: "The answer is: B. It’s about 5 times more common in boys (1 in 42) than in girls (1 in 189)."
+},
+	
+{
+	quizQuestions: "What is the earliest age you think that an accurate diagnosis of ASD can be given?",
+	quizChoices: ["(a) 12", "(b) 8", "(c) 4", "(d) 2"],
+	answerDetails: "The answer is: D. Children can be diagnosed as young as age 2, but on average are not diagnosed until age 4. Signs of Autism occur in childhood and thus it cannot be developed as an adult, although it will persist into a child’s adult life."
+}
+	
+];
+
+]
+
+//global variables
+var count = 0;
+	$intro = $(".intro");
+	$q = $(".question");
+	$a = $("#answerOpt");
+	$showE = $(".explanation");
+	$nextBtn = $("#nextBtn");
+	$results = $(".results");
+	$aTotal = $("#total");
+	$aFeedback = $(".quizAnswer");
+	$restartBtn = $("#restartBtn");
+
+//start quiz
+
+
+
+//question
+function showQuestion() {
+		$(".question").empty();
+		$(".answer").empty();
+		$(".question").append('<p>' + questions.quizQuestion + '</p>');
+		for (var i = 0; i<=4; i++) {
+			document.getElementByID('answerOpt').innerHTML += '<input type="radio" name="answers" value='+i+'>' + questions.quizChoices[i] + '<br/>';
+	};
+
+
+});
