@@ -1,19 +1,35 @@
-/* - The app must lead the user through a set of questions.
-   - The user should only see one question at a time, with new answers presented
-		only after they have answered the current one.
-   - Users should be able to to input their answer to each question, with
-		radio buttons or some other appropriate interface.
-   - When the user answers the last question, the app should show his or her
-   		overall score.
-   - Each question should be stored as a JavaScript object, and you’ll probably want
-   		to store your list of questions in an array.
+/*
+//get answer
+function checkAnswer(){
+	var userAnswer = $("input:radio[name='option']:checked");
+	var answerCheck = $(userAnswer).attr('id');
+    for(var i=0; i <= answerList.length; i++){
 
-If you are feeling particularly ambitious, consider implementing the
-	following features:
-	- Let the user know where in the quiz they are at each step (i.e. “Question 3 of 5")
-	- Let the user know their score so far
-	- Let the user know if their previous response was correct*/
+      if (+answerCheck+ === answerList[i].corrAns) {
+      		corrTrack++;
+      	}
+    }
+}
 
+
+
+$("input:radio[name='option']:checked").on("click",function(){
+	var userAnswer = $(this).attr('name');
+ 	var correct = getElementsByName('optionCorr');
+ 	if (""+userAnswer+"" == ""+correct+"") {
+ 		corrTrack++;
+ 	}
+});
+
+
+function checkAnswer(){
+	var userAnswer = $("input:radio[name='option']:checked");
+	var correct = $(userAnswer).attr('id');
+	if ((userAnswer).val() == "optionCorr") {
+		corrTrack++;
+	}
+}
+*/
 
 
 $(document).ready(function(){
@@ -40,11 +56,30 @@ function qAnswers(a0, a1, a2, a3, corrAns) {
 }
 
 var answerList = new Array();
-answerList[0] = new qAnswers("<li><input type=radio name='option' class='0'> (a) Mental disorder </li>", "<li><input type=radio name='option' class='1'> (b) Developmental disorder </li>", "<li><input type=radio name='option' class='2'>  (c) Personality disorder</li>", "<li><input type=radio name='option' class='3'> (d) Anxiety disorder</li>", 1);
-answerList[1] = new qAnswers("<li><input type=radio name='option' class='0'> (a) Medication </li>", "<li><input type=radio name='option' class='1'> (b) Behavioral therapy</li>", "<li><input type=radio name='option' class='2'> (c) Occupational therapy</li>", "<li><input type=radio name='option' class='3'> (d) All of the above</li>", 3);
-answerList[2] = new qAnswers("<li><input type=radio name='option' class='0'> (a) 1 in 68 children diagnosed</li>", "<li><input type=radio name='option' class='1'> (b) 1 in 110 children diagnosed</li>", "<li><input type=radio name='option' class='2'> (c) 1 in 136 children diagnosed</li>", "<li><input type=radio name='option' class='3'> (d) 1 in  240 children diagnosed</li>", 0);
-answerList[3] = new qAnswers("<li><input type=radio name='option' class='0'> (a) Girls</li>", "<li><input type=radio name='option' class='1'> (b) Boys</li>", "<li><input type=radio name='option' class='2'> (c) No gender discrepancy</li>", "<li><input type=radio name='option' class='3'>(d) No way to tell</li>", 1);
-answerList[4] = new qAnswers("<li><input type=radio name='option' class='0'> (a) 12</li>", "<li><input type=radio name='option' class='1'> (b) 8</li>", "<li><input type=radio name='option' class='2'> (c) 4</li>", "<li><input type=radio name='option' class='3'> (d) 2</li>", 3);
+answerList[0] = new qAnswers("<li><input type=radio name='option' id='1a' value='(a) Mental disorder '> (a) Mental disorder </li>",
+							"<li><input type=radio name='optionCorr' id='1b' value='(b) Developmental disorder'> (b) Developmental disorder</li>",
+							"<li><input type=radio name='option' id='1c' value='(c) Personality disorder'> (c) Personality disorder</li>",
+							"<li><input type=radio name='option' id='1d' value='(d) Anxiety disorder'> (d) Anxiety disorder</li>", "1a");
+
+answerList[1] = new qAnswers("<li><input type=radio name='option' id='2a' value='(a) Medication'> (a) Medication</li>",
+							"<li><input type=radio name='option' id='2b' value='(b) Behavioral therapy'> (b) Behavioral therapy</li>",
+							"<li><input type=radio name='option' id='2c' value='(c) Occupational therapy'> (c) Occupational therapy</li>",
+							"<li><input type=radio name='optionCorr' id='2d' value='(d) All of the above'> (d) All of the above</li>", "2d");
+
+answerList[2] = new qAnswers("<li><input type=radio name='optionCorr' id='3a' value='(a) 1 in 68 children diagnosed'> (a) 1 in 68 children diagnosed</li>",
+							"<li><input type=radio name='option' id='3b' value='(b) 1 in 110 children diagnosed'> (b) 1 in 110 children diagnosed</li>",
+							"<li><input type=radio name='option' id='3c' value='(c) 1 in 136 children diagnosed'> (c) 1 in 136 children diagnosed</li>",
+							"<li><input type=radio name='option' id='3d' value='(d) 1 in  240 children diagnosed'> (d) 1 in  240 children diagnosed</li>", "3a");
+
+answerList[3] = new qAnswers("<li><input type=radio name='option' id='4a' value='(a) Girls'> (a) Girls</li>",
+							"<li><input type=radio name='optionCorr' id='4b' value='(b) Boys'> (b) Boys</li>",
+							"<li><input type=radio name='option' id='4c' value='(c) No gender discrepancy'> (c) No gender discrepancy</li>",
+							"<li><input type=radio name='option' id='4d' value='(d) No way to tell'>(d) No way to tell</li>", "4b");
+
+answerList[4] = new qAnswers("<li><input type=radio name='option' id='5a' value='(a) 12'> (a) 12</li>",
+							"<li><input type=radio name='option' id='5b' value='(b) 8'> (b) 8</li>",
+							"<li><input type=radio name='option' id='5c' value='(c) 4'> (c) 4</li>",
+							"<li><input type=radio name='optionCorr' id='5d' value='(d) 2'> (d) 2</li>", "5d");
 
 
 //global variables
@@ -79,22 +114,6 @@ $startBtn.on('click',function(){
 
 
 
-//get answer
-function checkAnswer(){
-	var $userAnswer = document.getElementsByName("option");
-    for(var i=0; i<answerList.length; i++){
-
-      if($userAnswer.checked){
-        $userAnswer = option[i].value; 
-      }
-
-      if ($userAnswer === answerList[i].corrAns) {
-      		corrTrack++;
-			$answerCount.text("" + corrTrack + "");
-      	}
-    }
-}
- 
 
 
 //next question
@@ -104,16 +123,18 @@ $nextBtn.on('click',function() {
 	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
 		for (var i = 1; i <= 5; i++) {
 			if (qTrack <= 5) {
+				//checkAnswer();
 				$questionText.empty();
 				$questionOpts.empty();
 				nextQuestion();
-				checkAnswer();
+				$answerCount.text("" + corrTrack + "");
 				$answerTrack.fadeIn(800); 
 
 			} else if (qTrack === 6) {
+				//checkAnswer();
+				$answerCount.text("" + corrTrack + "");
 				$nextBtn.hide();
 				$answerTrack.hide();
-				checkAnswer();
 				$question.hide();
 				$results.show();
 				$restartBtn.show();
