@@ -103,6 +103,21 @@ h4 {
 	font-size: 20px;
 }
 
+a {
+	text-decoration: none;
+	color: #FF4D4D;
+}
+
+a:hover {
+	text-decoration: none;
+	color: blue;
+}
+
+a:visted {
+	text-decoration: none;
+	color: #FF4D4D;
+}
+
 #quizQuestion {
 	display: none;
 	font-weight: bold;
@@ -157,7 +172,7 @@ h4 {
 #restartBtn {
 	display: none;
 	height: 75px;
-	width: 180px;
+	width: 200px;
 	background: -webkit-linear-gradient(#FF4D4D, #A03131);
 	background: -o-linear-gradient(#FF4D4D, #A03131);
 	background: linear-gradient(#FF4D4D, #A03131); 
@@ -166,7 +181,5 @@ h4 {
 	font-family: Tahoma;
 	margin: 0 auto;
 	margin-top: 20px;
-
-.q {
 
 }

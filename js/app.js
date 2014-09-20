@@ -56,30 +56,30 @@ function qAnswers(a0, a1, a2, a3, corrAns) {
 }
 
 var answerList = new Array();
-answerList[0] = new qAnswers("<li><input type=radio name='option' id='1a' value='(a) Mental disorder '> (a) Mental disorder </li>",
-							"<li><input type=radio name='optionCorr' id='1b' value='(b) Developmental disorder'> (b) Developmental disorder</li>",
-							"<li><input type=radio name='option' id='1c' value='(c) Personality disorder'> (c) Personality disorder</li>",
-							"<li><input type=radio name='option' id='1d' value='(d) Anxiety disorder'> (d) Anxiety disorder</li>", "1a");
+answerList[0] = new qAnswers("<li><input type=radio name='option' id='1a' value=' Mental disorder '> Mental disorder </li>",
+							"<li><input type=radio name='optionCorr' id='1b' value=' Developmental disorder'> Developmental disorder</li>",
+							"<li><input type=radio name='option' id='1c' value=' Personality disorder'> Personality disorder</li>",
+							"<li><input type=radio name='option' id='1d' value=' Anxiety disorder'> Anxiety disorder</li>", "1a");
 
-answerList[1] = new qAnswers("<li><input type=radio name='option' id='2a' value='(a) Medication'> (a) Medication</li>",
-							"<li><input type=radio name='option' id='2b' value='(b) Behavioral therapy'> (b) Behavioral therapy</li>",
-							"<li><input type=radio name='option' id='2c' value='(c) Occupational therapy'> (c) Occupational therapy</li>",
-							"<li><input type=radio name='optionCorr' id='2d' value='(d) All of the above'> (d) All of the above</li>", "2d");
+answerList[1] = new qAnswers("<li><input type=radio name='option' id='2a' value=' Medication'> Medication</li>",
+							"<li><input type=radio name='option' id='2b' value=' Behavioral therapy'> Behavioral therapy</li>",
+							"<li><input type=radio name='option' id='2c' value=' Occupational therapy'> Occupational therapy</li>",
+							"<li><input type=radio name='optionCorr' id='2d' value=' All of the above'> All of the above</li>", "2d");
 
-answerList[2] = new qAnswers("<li><input type=radio name='optionCorr' id='3a' value='(a) 1 in 68 children diagnosed'> (a) 1 in 68 children diagnosed</li>",
-							"<li><input type=radio name='option' id='3b' value='(b) 1 in 110 children diagnosed'> (b) 1 in 110 children diagnosed</li>",
-							"<li><input type=radio name='option' id='3c' value='(c) 1 in 136 children diagnosed'> (c) 1 in 136 children diagnosed</li>",
-							"<li><input type=radio name='option' id='3d' value='(d) 1 in  240 children diagnosed'> (d) 1 in  240 children diagnosed</li>", "3a");
+answerList[2] = new qAnswers("<li><input type=radio name='optionCorr' id='3a' value=' 1 in 68 children diagnosed'> 1 in 68 children diagnosed</li>",
+							"<li><input type=radio name='option' id='3b' value=' 1 in 110 children diagnosed'> 1 in 110 children diagnosed</li>",
+							"<li><input type=radio name='option' id='3c' value=' 1 in 136 children diagnosed'> 1 in 136 children diagnosed</li>",
+							"<li><input type=radio name='option' id='3d' value=' 1 in  240 children diagnosed'> 1 in  240 children diagnosed</li>", "3a");
 
-answerList[3] = new qAnswers("<li><input type=radio name='option' id='4a' value='(a) Girls'> (a) Girls</li>",
-							"<li><input type=radio name='optionCorr' id='4b' value='(b) Boys'> (b) Boys</li>",
-							"<li><input type=radio name='option' id='4c' value='(c) No gender discrepancy'> (c) No gender discrepancy</li>",
-							"<li><input type=radio name='option' id='4d' value='(d) No way to tell'>(d) No way to tell</li>", "4b");
+answerList[3] = new qAnswers("<li><input type=radio name='option' id='4a' value=' Girls'> Girls</li>",
+							"<li><input type=radio name='optionCorr' id='4b' value=' Boys'> Boys</li>",
+							"<li><input type=radio name='option' id='4c' value=' No gender discrepancy'> No gender discrepancy</li>",
+							"<li><input type=radio name='option' id='4d' value=' No way to tell'> No way to tell</li>", "4b");
 
-answerList[4] = new qAnswers("<li><input type=radio name='option' id='5a' value='(a) 12'> (a) 12</li>",
-							"<li><input type=radio name='option' id='5b' value='(b) 8'> (b) 8</li>",
-							"<li><input type=radio name='option' id='5c' value='(c) 4'> (c) 4</li>",
-							"<li><input type=radio name='optionCorr' id='5d' value='(d) 2'> (d) 2</li>", "5d");
+answerList[4] = new qAnswers("<li><input type=radio name='option' id='5a' value=' 12'> 12</li>",
+							"<li><input type=radio name='option' id='5b' value=' 8'> 8</li>",
+							"<li><input type=radio name='option' id='5c' value=' 4'> 4</li>",
+							"<li><input type=radio name='optionCorr' id='5d' value=' 2'> 2</li>", "5d");
 
 
 //global variables
@@ -139,6 +139,7 @@ $nextBtn.on('click',function() {
 				$results.show();
 				$restartBtn.show();
 				$questionOpts.empty();
+				qTrack = 1;
 			} 
 	}
 });
