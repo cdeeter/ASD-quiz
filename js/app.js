@@ -1,90 +1,55 @@
-/*
-//get answer
-function checkAnswer(){
-	var userAnswer = $("input:radio[name='option']:checked");
-	var answerCheck = $(userAnswer).attr('id');
-    for(var i=0; i <= answerList.length; i++){
-
-      if (+answerCheck+ === answerList[i].corrAns) {
-      		corrTrack++;
-      	}
-    }
-}
-
-
-
-$("input:radio[name='option']:checked").on("click",function(){
-	var userAnswer = $(this).attr('name');
- 	var correct = getElementsByName('optionCorr');
- 	if (""+userAnswer+"" == ""+correct+"") {
- 		corrTrack++;
- 	}
-});
-
-
-function checkAnswer(){
-	var userAnswer = $("input:radio[name='option']:checked");
-	var correct = $(userAnswer).attr('id');
-	if ((userAnswer).val() == "optionCorr") {
-		corrTrack++;
-	}
-}
-*/
-
-
 $(document).ready(function(){
 
 //question setup
-function qDetails(qID, qText) {
-	this.qID = qID;
+function qDetails(qText, answer) {
 	this.qText = qText;
+	this.answer = answer;
 }
 
 var asdQuiz = new Array();
-asdQuiz[0] = new qDetails(0, "What kind of disorder is Autism?");
-asdQuiz[1] = new qDetails(1, "How is Autism treated?");
-asdQuiz[2] = new qDetails(2, "How prevalent is the diagnosis of Autism in the US?");
-asdQuiz[3] = new qDetails(3, "Whom is Autism more common among?");
-asdQuiz[4] = new qDetails(4, "What is the earliest age that an accurate diagnosis of Autism can be given?");
+asdQuiz[0] = new qDetails("What kind of disorder is Autism?", "b");
+asdQuiz[1] = new qDetails("How is Autism treated?", "d");
+asdQuiz[2] = new qDetails("How prevalent is the diagnosis of Autism in the US?", "a");
+asdQuiz[3] = new qDetails("Whom is Autism more common among?", "b");
+asdQuiz[4] = new qDetails("What is the earliest age that an accurate diagnosis of Autism can be given?", "d");
 
-function qAnswers(a0, a1, a2, a3, corrAns) {
+
+function qAnswers(a0, a1, a2, a3) {
 	this.a0 = a0;
 	this.a1 = a1;
 	this.a2 = a2;
 	this.a3 = a3;
-	this.corrAns = corrAns;
 }
 
 var answerList = new Array();
-answerList[0] = new qAnswers("<li><input type=radio name='option' id='1a' value=' Mental disorder '> Mental disorder </li>",
-							"<li><input type=radio name='optionCorr' id='1b' value=' Developmental disorder'> Developmental disorder</li>",
-							"<li><input type=radio name='option' id='1c' value=' Personality disorder'> Personality disorder</li>",
-							"<li><input type=radio name='option' id='1d' value=' Anxiety disorder'> Anxiety disorder</li>", "1a");
+answerList[0] = new qAnswers("Mental disorder",
+							"Developmental disorder",
+							"Personality disorder",
+							"Anxiety disorder");
 
-answerList[1] = new qAnswers("<li><input type=radio name='option' id='2a' value=' Medication'> Medication</li>",
-							"<li><input type=radio name='option' id='2b' value=' Behavioral therapy'> Behavioral therapy</li>",
-							"<li><input type=radio name='option' id='2c' value=' Occupational therapy'> Occupational therapy</li>",
-							"<li><input type=radio name='optionCorr' id='2d' value=' All of the above'> All of the above</li>", "2d");
+answerList[1] = new qAnswers("Medication",
+							"Behavioral therapy",
+							"Occupational therapy",
+							"All of the above");
 
-answerList[2] = new qAnswers("<li><input type=radio name='optionCorr' id='3a' value=' 1 in 68 children diagnosed'> 1 in 68 children diagnosed</li>",
-							"<li><input type=radio name='option' id='3b' value=' 1 in 110 children diagnosed'> 1 in 110 children diagnosed</li>",
-							"<li><input type=radio name='option' id='3c' value=' 1 in 136 children diagnosed'> 1 in 136 children diagnosed</li>",
-							"<li><input type=radio name='option' id='3d' value=' 1 in  240 children diagnosed'> 1 in  240 children diagnosed</li>", "3a");
+answerList[2] = new qAnswers("1 in 68 children diagnosed",
+							"1 in 110 children diagnosed",
+							"1 in 136 children diagnosed",
+							"1 in  240 children diagnosed");
 
-answerList[3] = new qAnswers("<li><input type=radio name='option' id='4a' value=' Girls'> Girls</li>",
-							"<li><input type=radio name='optionCorr' id='4b' value=' Boys'> Boys</li>",
-							"<li><input type=radio name='option' id='4c' value=' No gender discrepancy'> No gender discrepancy</li>",
-							"<li><input type=radio name='option' id='4d' value=' No way to tell'> No way to tell</li>", "4b");
+answerList[3] = new qAnswers("Girls",
+							"Boys",
+							"No gender discrepancy",
+							"No way to tell");
 
-answerList[4] = new qAnswers("<li><input type=radio name='option' id='5a' value=' 12'> 12</li>",
-							"<li><input type=radio name='option' id='5b' value=' 8'> 8</li>",
-							"<li><input type=radio name='option' id='5c' value=' 4'> 4</li>",
-							"<li><input type=radio name='optionCorr' id='5d' value=' 2'> 2</li>", "5d");
-
+answerList[4] = new qAnswers("12",
+							"8",
+							"4",
+							"2");
 
 //global variables
 var qTrack = 0;
-	corrTrack = 0;
+	cTrack = 0;
 	currentQuestion = 0;
 	$quiz = $("#quizBody");
 	$intro = $(".intro");
@@ -93,13 +58,11 @@ var qTrack = 0;
 	$questionText = $("#quizQuestion");
 	$questionOpts = $(".qOptions");
 	$answerCount = $(".answerCount");
-	$answerTrack = $(".answerTrack");
+	$answerTrack = $("#answerTrack");
 	$startBtn = $("#startBtn");
 	$nextBtn = $("#nextBtn");
 	$restartBtn = $("#restartBtn")
 	$results = $(".results");
-
-
 
 //begin quiz
 $startBtn.on('click',function(){
@@ -109,10 +72,8 @@ $startBtn.on('click',function(){
 	$question.fadeIn(800);
 	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
 	$questionText.show().text("" + asdQuiz[0].qText + "");
-	$questionOpts.append("" + answerList[currentQuestion].a0 + "").append("" + answerList[currentQuestion].a1 + "").append("" + answerList[currentQuestion].a2 + "").append("" + answerList[currentQuestion].a3 + "");
+	$questionOpts.append("<li><input type=radio name='option' id='a'> " + answerList[currentQuestion].a0 + "</li>").append("<li><input type=radio name='option' id='b'> " + answerList[currentQuestion].a1 + "</li>").append("<li><input type=radio name='option' id='c'> " + answerList[currentQuestion].a2 + "</li>").append("<li><input type=radio name='option' id='d'> " + answerList[currentQuestion].a3 + "</li>");
 });
-
-
 
 
 
@@ -121,46 +82,50 @@ $nextBtn.on('click',function() {
 	qTrack++;
 	currentQuestion++;
 	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
-		for (var i = 1; i <= 5; i++) {
-			if (qTrack <= 5) {
-				//checkAnswer();
-				$questionText.empty();
-				$questionOpts.empty();
-				nextQuestion();
-				$answerCount.text("" + corrTrack + "");
-				$answerTrack.fadeIn(800); 
-
-			} else if (qTrack === 6) {
-				//checkAnswer();
-				$answerCount.text("" + corrTrack + "");
-				$nextBtn.hide();
-				$answerTrack.hide();
-				$question.hide();
-				$results.show();
-				$restartBtn.show();
-				$questionOpts.empty();
-				qTrack = 1;
-			} 
-	}
+		if (qTrack <= 5) {
+			checkAnswer();
+			$questionText.empty();
+			$questionOpts.empty();
+			nextQuestion();
+			$answerTrack.fadeIn(800);
+		} else if (qTrack > 5) {
+			checkAnswer();
+			$nextBtn.hide();
+			$questionOpts.empty();
+			$question.hide();
+			$answerTrack.hide();
+			$results.show();
+			$restartBtn.show();
+			qTrack = 1;
+	} 
 });
 
 //load questions
 var nextQuestion = function() {
 	$questionText.text("" + asdQuiz[currentQuestion].qText + "");
-	$questionOpts.append("" + answerList[currentQuestion].a0 + "").append("" + answerList[currentQuestion].a1 + "").append("" + answerList[currentQuestion].a2 + "").append("" + answerList[currentQuestion].a3 + "");
-}
+		$questionOpts.append("<li><input type=radio name='option' id='a'> " + answerList[currentQuestion].a0 + "</li>").append("<li><input type=radio name='option' id='b'> " + answerList[currentQuestion].a1 + "</li>").append("<li><input type=radio name='option' id='c'> " + answerList[currentQuestion].a2 + "</li>").append("<li><input type=radio name='option' id='d'> " + answerList[currentQuestion].a3 + "</li>");
+	}
 
+//check answer
+var checkAnswer = function() {
+	var userAnswer = $("input:radio[name='option']:checked").attr('id');
+	for (var a = 0; a <= 4; a++) {
+		if (userAnswer === asdQuiz[a].answer) {
+			$answerCount.text(cTrack++); 
+		}
+	}
+}
 
 //retake quiz
 $restartBtn.on('click',function(){
 	var qTrack = 1;
-		corrTrack = 0;
+		cTrack = 0;
 		currentQuestion = 0;
 	$restartBtn.hide();
 	$results.hide();
 	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
 	$questionText.show().text("" + asdQuiz[0].qText + "");
-	$questionOpts.append("" + answerList[currentQuestion].a0 + "").append("" + answerList[currentQuestion].a1 + "").append("" + answerList[currentQuestion].a2 + "").append("" + answerList[currentQuestion].a3 + "");
+	$questionOpts.append("<li><input type=radio name='option' id='a'> " + answerList[currentQuestion].a0 + "</li>").append("<li><input type=radio name='option' id='b'> " + answerList[currentQuestion].a1 + "</li>").append("<li><input type=radio name='option' id='c'> " + answerList[currentQuestion].a2 + "</li>").append("<li><input type=radio name='option' id='d'> " + answerList[currentQuestion].a3 + "</li>");
 	$question.fadeIn(800);
 	$nextBtn.show();
 })
@@ -169,48 +134,6 @@ $restartBtn.on('click',function(){
 });
 
 
-
-
-
-
-/*Load question and choices
-	function loadQuestion() {
-		$quiz.empty();
-		$answers.empty();
-		$quiz.append('<p>' + allQuestions[current].question + '</p>');
-		for (var i = 0; i <= 3; i++) {
-			document.getElementById('answers').innerHTML += '<input type="radio" name="choice" value='+i+'>' + allQuestions[currentQuestion].qChoices[i] + '<br/>';
-		}
-	}
-
-
-
-
-	Questions  
-	ID    Question    CorrectAnswer ID
-	1     blah blah     2
-	2	  sdfsdf	    1	
-
-	Answers
-	QuestionId   Answer ID   Answer
-	1			 1			 blah blah
-	1			 2 			 sdfjsff
-
-	User
-	QuestionId   HisAnswerID   Correct
-			1			1		False
-
-	if(question[x]["correctanswerid"]==Answers[y]["AnswerID"])
-	if(question[x]["questiodid"]==userresponses[y]["questionID"])
-		if(userresponses[y]["answerid"]==questions[x]["correctanswer"])
-			userresponses[y]["correct"]=true
-			else 
-			userresponses[y]["correct"]
-
-
-
-
-	*/
 
 
 	
