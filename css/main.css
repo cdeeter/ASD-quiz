@@ -51,6 +51,7 @@ table {
 body {
 	background-image: url('../images/puzzle.jpg');
 	background-size: cover;
+	background-repeat: none;
 }
 
 
