@@ -49,20 +49,16 @@ body {
 	background-size: cover;
 	background-repeat: none;
 	background-position: fixed;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
-
-#container {
-	height: 665px;
-	background-image: url('../images/puzzle.jpg');
-	background-size: cover;
-	background-repeat: none;
-	background-position: fixed;
-}
 
 #quizBody {
-	position: absolute;
-	margin: 75px 125px 75px 125px;
+	position: relative;
+	margin: auto;
+	margin-top: 75px;
 	display: block;
 	height: 425px;
 	width: 900px;
