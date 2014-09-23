@@ -72,6 +72,7 @@ body {
 	padding-top: 30px;
 	padding: 50px;
 	background: rgba(250,250,250,.8);
+	filter: alpha(opacity=80);
 	border: 1px solid black;
 }
 
