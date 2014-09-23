@@ -150,6 +150,7 @@ a:visted {
 	font-size: 26px;
 	font-weight: bold;
 	border-radius: 5px;
+	background-color: #FF4D4D;
 	background: -webkit-linear-gradient(#FF4D4D, #A03131);
 	background: -o-linear-gradient(#FF4D4D, #A03131);
 	background: linear-gradient(#FF4D4D, #A03131); 
@@ -159,6 +160,7 @@ a:visted {
 	display: none;
 	height: 75px;
 	width: 200px;
+	background-color: #FF4D4D;
 	background: -webkit-linear-gradient(#FF4D4D, #A03131);
 	background: -o-linear-gradient(#FF4D4D, #A03131);
 	background: linear-gradient(#FF4D4D, #A03131); 
@@ -183,6 +185,7 @@ a:visted {
 	display: none;
 	height: 75px;
 	width: 200px;
+	background-color: #FF4D4D;
 	background: -webkit-linear-gradient(#FF4D4D, #A03131);
 	background: -o-linear-gradient(#FF4D4D, #A03131);
 	background: linear-gradient(#FF4D4D, #A03131); 
