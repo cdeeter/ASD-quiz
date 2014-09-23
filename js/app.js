@@ -56,7 +56,6 @@ answerList[4] = new qAnswers("2",
 var qTrack = 0;
 	cTrack = 0;
 	currentQuestion = 0;
-	current = 0;
 	$quiz = $("#quizBody");
 	$intro = $(".intro");
 	$question = $(".question");
@@ -86,7 +85,7 @@ $startBtn.on('click',function(){
 
 //next question
 $nextBtn.on('click',function() {
-		if (current < 4) {
+		if (currentQuestion < 4) {
 			checkAnswer();
 			$answerCount.text(cTrack); 
 			$questionText.empty();
@@ -118,16 +117,14 @@ var checkAnswer = function() {
 	if (userAnswer === undefined) {
 		alert("Please select an answer!");
 		$nextBtn.disabled();
-	} else if (userAnswer == answerList[current].answer) {
+	} else if (userAnswer == answerList[currentQuestion].answer) {
 		cTrack++;
 		currentQuestion++;
 		qTrack++;
-		current++;
 		$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
-	} else if (userAnswer != answerList[current].answer) {
+	} else if (userAnswer != answerList[currentQuestion].answer) {
 		currentQuestion++;
 		qTrack++;
-		current++;
 		$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
 	} 
 }
@@ -137,7 +134,6 @@ $restartBtn.on('click',function(){
 	var qTrack = 1;
 		cTrack = 0;
 		currentQuestion = 0;
-		current = 0;
 	$restartBtn.hide();
 	$results.hide();
 	$questionNum.text("Question " + qTrack + " of " + asdQuiz.length);
