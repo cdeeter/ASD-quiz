@@ -54,7 +54,6 @@ body {
 	background-position: fixed;
 	height: 100%;
 	width: 100%;
-	min-height: 680px;
 	padding-top: 1px;
 	margin-top: -1px;
 	margin: 0 auto;
@@ -65,12 +64,13 @@ body {
 	position: relative;
 	margin: auto;
 	margin-top: 75px;
+	margin-bottom: 75px;
 	display: block;
 	height: 425px;
 	width: 100%;
 	max-width: 800px;
 	font-family: Tahoma;
-	font-size: 20px;
+	font-size: 22px;
 	text-align: center;
 	padding-top: 30px;
 	padding: 50px;
@@ -136,12 +136,12 @@ a:visted {
 #quizQuestion {
 	display: none;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 22px;
 }
 
 
 .quizAnswer li {
-	font-size: 16px;
+	font-size: 18px;
 	text-align: left;
 	font-weight: 100;
 }
@@ -199,5 +199,5 @@ a:visted {
 	font-family: Tahoma;
 	margin: 0 auto;
 	margin-top: 20px;
-
 }
+
