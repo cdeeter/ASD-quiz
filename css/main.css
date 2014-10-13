@@ -67,7 +67,8 @@ body {
 	margin-top: 75px;
 	display: block;
 	height: 425px;
-	width: 900px;
+	width: 100%;
+	max-width: 800px;
 	font-family: Tahoma;
 	font-size: 20px;
 	text-align: center;
@@ -82,10 +83,12 @@ body {
 .question {
 	display: none;
 	height: 275px;
+	width: 100%;
 }
 
 .intro {
 	height: 275px;
+	width: 100%;
 }
 
 .results {
