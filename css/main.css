@@ -43,15 +43,21 @@ q:before, q:after {
 	content: none;
 }
 
-
 body {
+	background-color: #A03131;
+}
+
+.container {
 	background-image: url('../images/puzzle.jpg');
 	background-size: cover;
 	background-repeat: none;
 	background-position: fixed;
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
+	height: 100%;
+	width: 100%;
+	min-height: 680px;
+	padding-top: 1px;
+	margin-top: -1px;
+	margin: 0 auto;
 }
 
 
