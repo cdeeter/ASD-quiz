@@ -70,7 +70,7 @@ body {
 	width: 100%;
 	max-width: 800px;
 	font-family: Tahoma;
-	font-size: 22px;
+	font-size: 20px;
 	text-align: center;
 	padding-top: 30px;
 	padding: 40px;
@@ -231,4 +231,8 @@ a:focus {
 
 #restartBtn:active {
 	background: #A03131;
+}
+
+.bold {
+	font-weight: bolder;
 }
