@@ -235,4 +235,5 @@ a:focus {
 
 .bold {
 	font-weight: bolder;
+	color: red;
 }
