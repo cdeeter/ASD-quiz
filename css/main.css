@@ -129,6 +129,11 @@ a:visted {
 	color: #FF4D4D;
 }
 
+a:focus {
+	text-decoration: none;
+	color: #FF4D4D;
+}
+
 .btn:active {
 	border: 1px solid black;
 }
@@ -162,6 +167,14 @@ a:visted {
 	cursor: pointer;
 }
 
+#startBtn:focus {
+	outline:0 !important;
+}
+
+#startBtn:active {
+	background: #A03131;
+}
+
 #nextBtn {
 	display: none;
 	height: 75px;
@@ -175,6 +188,14 @@ a:visted {
 	font-family: Tahoma;
 	margin: 0 auto;
 	cursor: pointer;
+}
+
+#nextBtn:focus {
+	outline:0 !important;
+}
+
+#nextBtn:active {
+	background: #A03131;
 }
 
 #answerTrack {
@@ -204,3 +225,10 @@ a:visted {
 	cursor: pointer;
 }
 
+#restartBtn:focus {
+	outline:0 !important;
+}
+
+#restartBtn:active {
+	background: #A03131;
+}
