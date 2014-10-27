@@ -159,6 +159,7 @@ a:visted {
 	background: -webkit-linear-gradient(#FF4D4D, #A03131);
 	background: -o-linear-gradient(#FF4D4D, #A03131);
 	background: linear-gradient(#FF4D4D, #A03131); 
+	cursor: pointer;
 }
 
 #nextBtn {
@@ -173,6 +174,7 @@ a:visted {
 	font-weight: bold;
 	font-family: Tahoma;
 	margin: 0 auto;
+	cursor: pointer;
 }
 
 #answerTrack {
@@ -199,5 +201,6 @@ a:visted {
 	font-family: Tahoma;
 	margin: 0 auto;
 	margin-top: 20px;
+	cursor: pointer;
 }
 
