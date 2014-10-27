@@ -89,6 +89,7 @@ body {
 .intro {
 	height: 275px;
 	width: 100%;
+	font-size: 22px;
 }
 
 .results {
