@@ -30,9 +30,7 @@ ol, ul {
 }
 
 body {
-	background-color: #0029A3;
 	background-image: url('../images/puzzle.jpg');
-    background-repeat: no-repeat;
     width: 100%;
 }
 
@@ -147,4 +145,11 @@ button {
 
 small {
     font-size: smaller;
+}
+
+@media (max-width: 1000px) {
+    #quizBody {
+        margin-top: 25%;
+        width: 75%;
+    }
 }
