@@ -31,6 +31,7 @@ ol, ul {
 
 body {
 	background-image: url('../images/puzzle.jpg');
+    background-repeat: no-repeat;
     width: 100%;
 }
 
