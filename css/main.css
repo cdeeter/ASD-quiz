@@ -140,7 +140,7 @@ button {
 }
 
 .answerInfo {
-    min-height: 100px;
+    min-height: 115px;
 }
 
 small {
@@ -153,10 +153,11 @@ small {
         width: 75%;
         min-height: 450px;
         font-size: 22px;
+        padding-top: 15px;
     }
     
     h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
     
     .answerTrack {
@@ -173,5 +174,13 @@ small {
         height: 100px;
         width: 225px;
         font-size: 26px;
+    }
+    
+    .qOptions li {
+        padding: 10px;
+    }
+    
+    .end {
+        font-size: 20px;
     }
 }
