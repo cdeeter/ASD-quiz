@@ -149,9 +149,9 @@ small {
 
 @media (max-width: 1000px) {
     #quizBody {
-        margin-top: 15%;
+        margin-top: 10%;
         width: 75%;
-        min-height: 450px;
+        min-height: 550px;
         font-size: 22px;
         padding-top: 15px;
     }
