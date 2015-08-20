@@ -78,7 +78,6 @@ h2 {
 
 
 .quizAnswer li {
-	font-size: 16px;
 	text-align: left;
 	font-weight: 100;
 }
@@ -152,7 +151,26 @@ small {
     #quizBody {
         margin-top: 15%;
         width: 75%;
-        min-height: 400px;
+        min-height: 450px;
         font-size: 20px;
+    }
+    
+    h1 {
+        font-size: 29px;
+    }
+    
+    .answerTrack {
+        font-size: 26px;
+    }
+    
+    button {
+        height: 75px;
+        width: 175px;
+        font-size: 22px;
+    }
+    
+    #startBtn {
+        height: 100px;
+        width: 225px;
     }
 }
