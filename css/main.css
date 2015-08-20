@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,221 +15,135 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: Arial;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
 
 body {
-	background-color: #E60000;
-}
-
-.container {
+	background-color: #0029A3;
 	background-image: url('../images/puzzle.jpg');
-	background-size: cover;
-	background-repeat: none;
-	background-position: fixed;
-	height: 100%;
-	width: 100%;
-	padding-top: 1px;
-	margin-top: -1px;
-	margin: 0 auto;
+    width: 100%;
 }
 
+button {
+    cursor: pointer;
+}
 
 #quizBody {
-	position: relative;
-	margin: auto;
-	margin-top: 85px;
-	margin-bottom: 85px;
 	display: block;
-	height: 425px;
-	width: 100%;
-	max-width: 800px;
-	font-family: Tahoma;
-	font-size: 20px;
+	margin: auto;
+	margin-top: 75px;
+	margin-bottom: 75px;
+    height: 100%;
+    min-height: 350px;
+    width: 50%;
+	min-width: 500px;
+	font-size: 16px;
 	text-align: center;
 	padding-top: 30px;
 	padding: 40px;
-	background-color: white;
 	background: rgba(250,250,250,.8);
-	filter: alpha(opacity=80);
 	border: 1px solid black;
-}
-
-.question {
-	display: none;
-	height: 275px;
-	width: 100%;
+    -webkit-box-shadow: 20px 19px 79px 4px rgba(56,56,56,1);
+    -moz-box-shadow: 20px 19px 79px 4px rgba(56,56,56,1);
+    box-shadow: 20px 19px 79px 4px rgba(56,56,56,1);
 }
 
 .intro {
 	height: 275px;
-	width: 100%;
-	font-size: 22px;
 }
-
-.results {
-	display: none;
-	height: 375px;
-	margin-top: -100px;
-	overflow-y: scroll;
-}
-
 
 h1 {
-	font-size: 40px;
-	font-weight: bold;
+    font-size: 25px;
 	text-align: center;
 }
 
 h2 {
-	font-size: 30px;
 	font-weight: bold;
-}
-
-h4 {
-	font-size: 20px;
-}
-
-a {
-	text-decoration: none;
-	color: #FF4D4D;
-}
-
-a:hover {
-	text-decoration: none;
-	color: blue;
-}
-
-a:visted {
-	text-decoration: none;
-	color: #FF4D4D;
-}
-
-a:focus {
-	text-decoration: none;
-	color: #FF4D4D;
-}
-
-.btn:active {
-	border: 1px solid black;
 }
 
 #quizQuestion {
-	display: none;
 	font-weight: bold;
-	font-size: 22px;
 }
 
 
 .quizAnswer li {
-	font-size: 18px;
+	font-size: 16px;
 	text-align: left;
 	font-weight: 100;
 }
 
-
-#startBtn {
-	height: 100px;
-	width: 250px;
-	border: 1px solid black;
-	font-family: Tahoma;
-	font-size: 26px;
-	font-weight: bold;
-	border-radius: 5px;
-	background-color: #FF4D4D;
-	background: -webkit-linear-gradient(#FF4D4D, #A03131);
-	background: -o-linear-gradient(#FF4D4D, #A03131);
-	background: linear-gradient(#FF4D4D, #A03131); 
-	cursor: pointer;
-}
-
-#startBtn:focus {
-	outline:0 !important;
-}
-
-#startBtn:active {
-	background: #A03131;
-}
-
-#nextBtn {
-	display: none;
-	height: 75px;
-	width: 200px;
-	background-color: #FF4D4D;
+button {
+	height: 50px;
+	width: 150px;
 	background: -webkit-linear-gradient(#FF4D4D, #A03131);
 	background: -o-linear-gradient(#FF4D4D, #A03131);
 	background: linear-gradient(#FF4D4D, #A03131); 
 	font-size: 18px;
 	font-weight: bold;
-	font-family: Tahoma;
 	margin: 0 auto;
-	cursor: pointer;
 }
 
-#nextBtn:focus {
-	outline:0 !important;
-}
 
-#nextBtn:active {
-	background: #A03131;
-}
-
-#answerTrack {
-	display: none;
-	position: relative;
-	margin: 0 auto;
-	font-family: Tahoma;
-	font-size: 25px;
-	font-weight: bold;
-	text-align: center;
-	padding: 10px;
-}
-
-#restartBtn {
-	display: none;
+#startBtn {
 	height: 75px;
 	width: 200px;
-	background-color: #FF4D4D;
+	border: 1px solid black;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
 	background: -webkit-linear-gradient(#FF4D4D, #A03131);
 	background: -o-linear-gradient(#FF4D4D, #A03131);
 	background: linear-gradient(#FF4D4D, #A03131); 
-	font-size: 20px;
-	font-weight: bold;
-	font-family: Tahoma;
+}
+
+.answerTrack {
+	position: relative;
 	margin: 0 auto;
-	margin-top: 20px;
-	cursor: pointer;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+    bottom: 0;
 }
 
-#restartBtn:focus {
-	outline:0 !important;
+.qOptions li {
+    margin: auto;
+    display: none;
+    cursor: pointer;
+    padding: 5px;
 }
 
-#restartBtn:active {
-	background: #A03131;
+.qOptions li span:hover {
+    border-bottom: 3px solid red;
 }
 
-.bold {
-	font-weight: bolder;
-	color: blue;
+.end, .answer, .question {
+    display: none;
+}
+
+.question, .intro {
+    padding-top: 50px;
+}
+
+.answer, .end {
+    padding-top: 25px;
+}
+
+.answerInfo {
+    min-height: 100px;
+}
+
+small {
+    font-size: smaller;
 }
