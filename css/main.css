@@ -42,7 +42,7 @@ button {
 #quizBody {
 	display: block;
 	margin: auto;
-	margin-top: 10%;
+	margin-top: 8%;
 	margin-bottom: 75px;
     height: 100%;
     min-height: 350px;
@@ -152,25 +152,26 @@ small {
         margin-top: 15%;
         width: 75%;
         min-height: 450px;
-        font-size: 20px;
+        font-size: 22px;
     }
     
     h1 {
-        font-size: 29px;
+        font-size: 32px;
     }
     
     .answerTrack {
-        font-size: 26px;
+        font-size: 28px;
     }
     
     button {
         height: 75px;
         width: 175px;
-        font-size: 22px;
+        font-size: 24px;
     }
     
     #startBtn {
         height: 100px;
         width: 225px;
+        font-size: 26px;
     }
 }
