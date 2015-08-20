@@ -43,7 +43,7 @@ button {
 #quizBody {
 	display: block;
 	margin: auto;
-	margin-top: 75px;
+	margin-top: 10%;
 	margin-bottom: 75px;
     height: 100%;
     min-height: 350px;
